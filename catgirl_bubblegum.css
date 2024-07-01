@@ -1,0 +1,213 @@
+/* ==UserStyle==
+@name           Catgirl Bubblegum
+@namespace      github.com/openstyles/stylus
+@version        1.0
+@description    For catgirls, by catgirl
+@author         Morrigankitty
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document domain("reddit.com"), domain("old.reddit.com") {
+
+    :root {
+        --text: #313131;
+        --background-light: #faf9fb;
+        --background-dark: #ff93fa9c;
+        --link: #6b4cff;
+        --link-visited: #b137f3;
+        --code: #08060d;
+        --hidden-text: #313131;
+        --buttons: #6c6a6a;
+        --arrows-unclicked: #bfb2ff91;
+        --arrows-clicked: #8a6bfb;
+        --selected-tab: #ecc8ff73;
+        --selected-text: #6b4cff;
+        --border-light: #ee82ee66;
+        --border-light-alt: #ffffff61;
+    }
+
+    /* Hide elements */
+    .premium-banner-outer,
+    .redesign-beta-optin,
+    .promoted,
+    .sb-unit {
+        display: none !important;
+    }
+
+    /* Text color */
+    .md,
+    span.score,
+    .fancy-toggle-button a,
+    a.message-count,
+    p.tagline {
+        color: var(--text) !important;
+    }
+
+    #header-img.default-header {
+        filter: invert(50%) sepia(100%) hue-rotate(15338.7deg) brightness(120%) saturate(499%);
+    }
+
+    /* Background colors */
+    .entry.res-selected,
+    .entry.res-selected .md-container,
+    #header-bottom-left,
+    .grippy,
+    .spacer,
+    #sr-header-area,
+    #header-bottom-right,
+    .side,
+    div[id^="siteTable"]>div.comment,
+    textarea,
+    .linkinfo,
+    .toggle,
+    .entry,
+    #sr-more-link,
+    .usertext-body,
+    .md,
+    div[data-type="link"].thing {
+        background-color: var(--background-light) !important;
+        color: var(--text);
+    }
+
+    .infobar,
+    .tabmenu li a,
+    .morelink a,
+    input,
+    button,
+    select,
+    span[class$="-button"] a {
+        background-color: var(--background-dark);
+        color: var(--text);
+    }
+
+    .tabmenu li.selected a {
+        background-color: var(--selected-tab) !important;
+        color: var(--selected-text) !important;
+        border: 1px solid var(--border-light);
+        border-bottom-color: var(--border-light-alt);
+    }
+
+    #header {
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    /* Remove borders */
+    li a.selected,
+    .selected,
+    .morelink,
+    input,
+    div.thing,
+    button,
+    .entry,
+    select,
+    span[class$="-button"] a,
+    .grippy {
+        border: none !important;
+    }
+
+    body {
+        background-color: var(--background-light);
+        color: var(--text);
+    }
+
+    .res-fancy-toggle-button {
+        background-image: linear-gradient(to bottom, #fb6bed, rgb(251, 161, 244)) !important;
+        border: none !important;
+    }
+
+    /* Action buttons on each post */
+    ul.flat-list.buttons>li a,
+    span.userkarma,
+    span.separator {
+        color: var(--buttons) !important;
+    }
+
+    /* Links */
+    a,
+    a.author.may-blank {
+        color: var(--link) !important;
+    }
+
+    /* Visited links inside .sitetable */
+    .sitetable a:visited,
+    .sitetable a.author.may-blank:visited {
+        color: var(--link-visited) !important;
+    }
+
+    span.score-hidden {
+        color: var(--hidden-text) !important;
+    }
+
+    /* Expand media buttons */
+    .expando-button {
+        opacity: 50%;
+    }
+
+    .res-hasNewComments .newComments {
+        opacity: 60% !important;
+    }
+
+    /* Side box with create posts links */
+    div.side {
+        border: solid 1px #ffffff21;
+        border-radius: 3px;
+    }
+
+    div.side .morelink {
+        border-radius: 3px;
+    }
+
+    div.side .nub {
+        display: none;
+    }
+
+    /* Fancy toggle button */
+    .fancy-toggle-button .add {
+        background-image: none !important;
+        background-color: var(--link);
+        color: var(--text);
+    }
+
+    /* Thumbnail */
+    .thumbnail.self {
+        opacity: 30%;
+    }
+
+    /* Flair */
+    .flair,
+    .linkflairlabel {
+        background-color: transparent !important;
+    }
+
+    /* Span text */
+    span {
+        color: var(--text) !important;
+    }
+
+    /* Input text */
+    input[type="text"] {
+        color: var(--buttons) !important;
+    }
+
+    .md code,
+    .md pre {
+        background-color: transparent !important;
+        color: var(--code);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 12px;
+        background: #0e0e0e;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--link);
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+    }
+
+    ::-webkit-scrollbar-corner {
+        background: #000;
+    }
+}
